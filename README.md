@@ -13,6 +13,9 @@
   - follow instructions when prompted
   - to start ssh-agent, `` eval `ssh-agent -s`  ``
   - add the new private key with `ssh-add FILE_NAME`
+- To delete local commits
+  - `git reset --hard HEAD~1` where `HEAD~1` means get rid of the latest from HEAD
+  - `git reset --hard <commit hash>` <- this is easier imo 
 
 **Troubleshooting**
 
