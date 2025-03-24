@@ -26,4 +26,4 @@
 1. [https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github](url)
 2. [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent](url)
 3. [https://stackoverflow.com/questions/25869207/getting-warning-unprotected-private-key-file-error-message-while-attempting](url)
-4. [[https://stackoverflow.com/questions/1338728/how-do-i-delete-a-commit-from-a-branch]]
+4. [https://stackoverflow.com/questions/1338728/how-do-i-delete-a-commit-from-a-branch](url)
