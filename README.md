@@ -13,6 +13,25 @@
   - follow instructions when prompted
   - to start ssh-agent, `` eval `ssh-agent -s`  ``
   - add the new private key with `ssh-add FILE_NAME`
+  - add the public key to github (settings >> ssh & gpg keys >> new ssh key)
+  - git config --global url."git@github.com:".insteadOf "https://github.com/"
+  - OPTIONAL, configure git to use ssh
+     - git config --global url."git@github.com:".insteadOf "https://github.com/"
+  - add this script to your .bashrc or .zshrc:
+```
+    # Start ssh-agent and add key if not already running
+    if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+        eval "$(ssh-agent -s)"
+    fi
+    
+    # Add SSH key (if not already added)
+    if ! ssh-add -l | grep -q "id_ed25519"; then
+        ssh-add ~/.ssh/id_ed25519
+    fi
+```
+  - replace "id_ed25519" with the name of you private key file
+  - source your settings file with `source .zshrc/.bashrc`
+  - test with `ssh -T git@github.com`
 - To delete local commits
   - `git reset --hard HEAD~1` where `HEAD~1` means get rid of the latest from HEAD
   - `git reset --hard <commit hash>` <- this is easier imo 
